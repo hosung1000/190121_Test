@@ -18,6 +18,7 @@ namespace _20181207.Controller
         private TextBox textBox1, textBox2, textBox3, textBox4, textBox5, textBox6;
         private Form parentForm, tagetForm;
         private Hashtable hashtable;
+        private WebapiConn api;
 
         public MainController(Form parentForm)
         {
@@ -177,15 +178,20 @@ namespace _20181207.Controller
             listView.Columns.Add("regDate", 200, HorizontalAlignment.Left);     /* Notice 작성 현재날짜 */
             listView.Columns.Add("modDate", 200, HorizontalAlignment.Left);     /* Notice 수정 현재날짜 */
 
-            // 보여 주기 가상 데이터 -> WebAPI를 이용하여 데이터 가져올것!
-            listView.Items.Add(new ListViewItem(new string[] { "3", "제목3", "내용3", "Winform", "2018-12-07", "2016-12-07" }));
-            listView.Items.Add(new ListViewItem(new string[] { "2", "제목2", "내용2", "스마트", "2018-12-06", "2016-12-07" }));
-            listView.Items.Add(new ListViewItem(new string[] { "1", "제목1", "내용1", "관리자", "2018-12-05", "2016-12-07" }));
+            
+            api = new WebapiConn();
+            api.SelectListView("http://192.168.3.134:80/Select", listView);
+
         }
 
         private void SetInsert(object o, EventArgs e)
         {
-            MessageBox.Show("SetInsert");
+            api = new WebapiConn();
+            Hashtable ht = new Hashtable();
+            ht.Add("nTitle", textBox2.Text);
+            ht.Add("nContents", textBox3.Text);
+            ht.Add("mName", textBox4.Text);
+            api.InsertListView("http://192.168.3.134:80/Insert", ht);
         }
         private void SetUpdate(object o, EventArgs e)
         {
