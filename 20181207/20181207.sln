@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20181207", "20181207.csproj", "{41F2D274-4533-4584-8D8E-AB5B5D83B49A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WEBAPI", "..\WEBAPI\WEBAPI.csproj", "{7EC9799F-A086-4F2B-A265-40F6F218C9AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEBAPI", "..\WEBAPI\WEBAPI.csproj", "{7EC9799F-A086-4F2B-A265-40F6F218C9AB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module", "Module\Module.csproj", "{B733A20C-503B-4DBE-B2BB-786DDB2D5A65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module", "Module\Module.csproj", "{B733A20C-503B-4DBE-B2BB-786DDB2D5A65}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{07624A38-773B-4B9C-8B0E-51E521637CD3}"
 EndProject
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{41F2D274-4533-4584-8D8E-AB5B5D83B49A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{41F2D274-4533-4584-8D8E-AB5B5D83B49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{41F2D274-4533-4584-8D8E-AB5B5D83B49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{41F2D274-4533-4584-8D8E-AB5B5D83B49A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7EC9799F-A086-4F2B-A265-40F6F218C9AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7EC9799F-A086-4F2B-A265-40F6F218C9AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EC9799F-A086-4F2B-A265-40F6F218C9AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
