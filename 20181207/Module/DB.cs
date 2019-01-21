@@ -67,6 +67,7 @@ namespace Module
 
             try
             {
+                //
                 MySqlCommand comm = new MySqlCommand();
                 comm.CommandText = sql;
                 comm.Connection = GetConnection();
