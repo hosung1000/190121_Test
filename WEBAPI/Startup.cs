@@ -32,6 +32,7 @@ namespace WEBAPI
         {
             if (env.IsDevelopment())
             {
+                app.UseStaticFiles();
                 app.UseDeveloperExceptionPage();
             }
 
