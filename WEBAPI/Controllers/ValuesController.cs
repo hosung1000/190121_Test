@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Module;
+using ClassLibrary;
 using MySql.Data.MySqlClient;
 
 namespace WEBAPI.Controllers
