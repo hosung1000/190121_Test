@@ -32,7 +32,6 @@ namespace ClassLibrary
                 }
                 string strConnection1
                     = string.Format("server={0};user={1};password={2};database={3}", map["server"], map["user"], map["password"], map["database"]);
-                Console.WriteLine(strConnection1);
                 conn.ConnectionString = strConnection1;
                 conn.Open();
 

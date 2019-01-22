@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,7 +21,11 @@ namespace _20181207.Controller
         private Form parentForm, tagetForm;
         private Hashtable hashtable;
         private WebapiConn api;
-
+        /*
+        private string strConnection1 = "192.168.3.136";
+        private string strConnection2 = "192.168.3.153";
+        */
+        string result;
         public MainController(Form parentForm)
         {
             this.parentForm = parentForm;
@@ -73,7 +79,7 @@ namespace _20181207.Controller
             hashtable.Add("color", 0);
             hashtable.Add("name", "btn1");
             hashtable.Add("text", "입력");
-            hashtable.Add("click", (EventHandler) SetInsert);
+            hashtable.Add("click", (EventHandler)SetInsert);
             btn1 = comm.getButton(hashtable, head);
 
             hashtable = new Hashtable();
@@ -84,7 +90,7 @@ namespace _20181207.Controller
             hashtable.Add("color", 0);
             hashtable.Add("name", "btn2");
             hashtable.Add("text", "수정");
-            hashtable.Add("click", (EventHandler) SetUpdate);
+            hashtable.Add("click", (EventHandler)SetUpdate);
             btn2 = comm.getButton(hashtable, head);
 
             hashtable = new Hashtable();
@@ -95,7 +101,7 @@ namespace _20181207.Controller
             hashtable.Add("color", 0);
             hashtable.Add("name", "btn3");
             hashtable.Add("text", "삭제");
-            hashtable.Add("click", (EventHandler) SetDelete);
+            hashtable.Add("click", (EventHandler)SetDelete);
             btn3 = comm.getButton(hashtable, head);
 
             hashtable = new Hashtable();
@@ -178,9 +184,9 @@ namespace _20181207.Controller
             listView.Columns.Add("regDate", 200, HorizontalAlignment.Left);     /* Notice 작성 현재날짜 */
             listView.Columns.Add("modDate", 200, HorizontalAlignment.Left);     /* Notice 수정 현재날짜 */
 
-            
+
             api = new WebapiConn();
-            api.SelectListView("http://192.168.3.136:80/Select", listView);
+            api.SelectListView("http://192.153.3.136:80/Select", listView);
         }
 
         private void SetInsert(object o, EventArgs e)
@@ -190,7 +196,7 @@ namespace _20181207.Controller
             ht.Add("nTitle", textBox2.Text);
             ht.Add("nContents", textBox3.Text);
             ht.Add("mName", textBox4.Text);
-            api.InsertListView("http://192.168.3.136:80/Insert", ht);
+            api.InsertListView("http://192.153.3.136:80/Insert", ht);
         }
         private void SetUpdate(object o, EventArgs e)
         {
@@ -204,5 +210,31 @@ namespace _20181207.Controller
         {
             MessageBox.Show("listView_click");
         }
+        /*
+        public string IPConn()
+        {
+           
+            //IP 찾아주기
+            IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
+            for (int i = 0; i < host.AddressList.Length; i++)
+            {
+                if (host.AddressList[i].AddressFamily == AddressFamily.InterNetwork)
+                {
+                    string targetIp = host.AddressList[i].ToString();
+                    if (targetIp == "192.168.3.135")
+                    {
+                        result = strConnection2;
+                        //Console.WriteLine("운영DB");
+                    }
+                    else
+                    {
+                        result = strConnection1;
+                        //Console.WriteLine("테스트DB");
+                    }
+                }               
+            }
+            return result;
+        }
+        */
     }
 }
