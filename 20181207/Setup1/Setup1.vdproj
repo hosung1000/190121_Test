@@ -15,32 +15,32 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_136CEBA79ACF460A827A05028C43AC90"
+        "MsmKey" = "8:_B144B72FD4A14C46B08B62276A62075E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CB4BBDE225945CF2EA7722A9971992C2"
-        "OwnerKey" = "8:_E4CF4A444E9742FD9DCD30639CFD3D4A"
+        "MsmKey" = "8:_D2417DCB59FE9EE67049F648ED4306B3"
+        "OwnerKey" = "8:_DC0075E71FA04CD9AE415E0BEFF8C21D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E4CF4A444E9742FD9DCD30639CFD3D4A"
+        "MsmKey" = "8:_DC0075E71FA04CD9AE415E0BEFF8C21D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E4CF4A444E9742FD9DCD30639CFD3D4A"
+        "OwnerKey" = "8:_DC0075E71FA04CD9AE415E0BEFF8C21D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CB4BBDE225945CF2EA7722A9971992C2"
+        "OwnerKey" = "8:_D2417DCB59FE9EE67049F648ED4306B3"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -61,6 +61,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -77,6 +93,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -106,9 +130,9 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_136CEBA79ACF460A827A05028C43AC90"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B144B72FD4A14C46B08B62276A62075E"
             {
-            "SourcePath" = "8:..\\bin\\Debug\\20181207.exe.config"
+            "SourcePath" = "8:..\\..\\..\\..\\190121\\190121_Test\\20181207\\bin\\Debug\\20181207.exe.config"
             "TargetName" = "8:20181207.exe.config"
             "Tag" = "8:"
             "Folder" = "8:_F347D0B3C79C4288980391345DFD1A4D"
@@ -126,14 +150,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CB4BBDE225945CF2EA7722A9971992C2"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D2417DCB59FE9EE67049F648ED4306B3"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_CB4BBDE225945CF2EA7722A9971992C2"
+                    "_D2417DCB59FE9EE67049F648ED4306B3"
                     {
                     "Name" = "8:Newtonsoft.Json.DLL"
                     "Attributes" = "3:512"
@@ -157,20 +181,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E4CF4A444E9742FD9DCD30639CFD3D4A"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DC0075E71FA04CD9AE415E0BEFF8C21D"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:20181207, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E4CF4A444E9742FD9DCD30639CFD3D4A"
+                    "_DC0075E71FA04CD9AE415E0BEFF8C21D"
                     {
                     "Name" = "8:20181207.exe"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\bin\\Debug\\20181207.exe"
+            "SourcePath" = "8:..\\..\\..\\..\\190121\\190121_Test\\20181207\\bin\\Debug\\20181207.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F347D0B3C79C4288980391345DFD1A4D"
@@ -245,7 +269,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup1"
         "ProductCode" = "8:{69CDA0EC-995E-46E3-8B5C-FA91E782FD5C}"
-        "PackageCode" = "8:{DBE4F86E-AEB0-4B5E-B74B-5C42A0FDA639}"
+        "PackageCode" = "8:{7CF7590B-E391-4EAE-9EE1-66779D6381F6}"
         "UpgradeCode" = "8:{E6438510-EE6B-4BFF-99DA-177F50732D2A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -365,15 +389,15 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_838EFDFBAE5E40D0A6BA9DD3CA04EE7B"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BAFD9321E54F486F8F0BB53D26F72DCC"
             {
-            "Name" = "8:Shortcut to 20181207.exe"
+            "Name" = "8:천호성"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_E4CF4A444E9742FD9DCD30639CFD3D4A"
+            "Target" = "8:_DC0075E71FA04CD9AE415E0BEFF8C21D"
             "Folder" = "8:_8B8AA53CC2354EC5926DD08FB2A08ACC"
             "WorkingFolder" = "8:_F347D0B3C79C4288980391345DFD1A4D"
             "Icon" = "8:"

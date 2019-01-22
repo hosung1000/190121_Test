@@ -180,8 +180,7 @@ namespace _20181207.Controller
 
             
             api = new WebapiConn();
-            api.SelectListView("http://192.168.3.134:80/Select", listView);
-
+            api.SelectListView("http://192.168.3.136:80/Select", listView);
         }
 
         private void SetInsert(object o, EventArgs e)
@@ -191,7 +190,7 @@ namespace _20181207.Controller
             ht.Add("nTitle", textBox2.Text);
             ht.Add("nContents", textBox3.Text);
             ht.Add("mName", textBox4.Text);
-            api.InsertListView("http://192.168.3.134:80/Insert", ht);
+            api.InsertListView("http://192.168.3.136:80/Insert", ht);
         }
         private void SetUpdate(object o, EventArgs e)
         {

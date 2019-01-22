@@ -1,7 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Data;
+using System.IO;
 
 namespace ClassLibrary
 {
@@ -9,20 +12,33 @@ namespace ClassLibrary
     {
         public MySqlConnection 원본, conn;
 
-        string strConnection =
-                            string.Format("server={0};user={1};password={2};database={3}", "192.168.3.136", "root", "1234", "test2");
-
-        //DB 접속
         public MySqlConnection GetConnection()
         {
+            //DB 접속
             try
             {
-                conn = new MySqlConnection();
-                conn.ConnectionString = strConnection;
-                Console.WriteLine("접속");
+                MySqlConnection conn = new MySqlConnection();
+
+                string path = "/public/DBInfo.json"; 
+                string result = new StreamReader(File.OpenRead(path)).ReadToEnd();
+
+             
+                JObject jo = JsonConvert.DeserializeObject<JObject>(result);
+                Hashtable map = new Hashtable();
+               
+                foreach (JProperty col in jo.Properties())
+                {
+                    map.Add(col.Name, col.Value);
+                }
+                string strConnection1
+                    = string.Format("server={0};user={1};password={2};database={3}", map["server"], map["user"], map["password"], map["database"]);
+                Console.WriteLine(strConnection1);
+                conn.ConnectionString = strConnection1;
                 conn.Open();
+
                 return conn;
             }
+            //오류 걸릴때
             catch (MySqlException e)
             {
                 Console.WriteLine("접속 실패");
